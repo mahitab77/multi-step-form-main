@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+      
+          <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+          <link rel="stylesheet" href="./indexcss.css"> 
+          <title>Multi-step form</title>   
+     </head>
+<body>
+  <div id="parent">
+     <!-- Sidebar start -->
+     <div id="sidebar">
+                  <div id="sidebarsteps">
+                       <div id="info" class="steps">
+                            <div id="one" class="number">1</div>
+                            <div class="stepsnoname">
+                                <h class="stepsno">Step 1</h>
+                                <h class="stepsname">your info</h>
+                            </div>   
+                       </div>    
+                       <div id="plan" class="steps">
+                            <div id="two" class="number">2</div>
+                            <div class="stepsnoname">
+                                <h class="stepsno">Step 2</h>
+                                <h class="stepsname">Select Plan</h>
+                            </div>   
+                       </div>    
+                       <div id="addons" class="steps">
+                            <div id="three" class="number">3</div>
+                            <div class="stepsnoname">
+                                <h class="stepsno" >Step 3</h>
+                                <h class="stepsname">Add-ons</h>
+                            </div>
+                       </div>    
+                       <div id="summary" class="steps">
+                            <div id="four" class="number">4</div>
+                            <div class="stepsnoname">
+                                <h class="stepsno">Step 4</h>
+                                <h class="stepsname"> Summary</h>
+                            </div>
+                       </div>  
+                 </div> 
+     </div>
+     <!-- Sidebar end -->
+     <!--Form-->
+     <div id="formcontainer">
+            <!--Step1 -->
+            <div id="step1" class="stepsinput">
+                       <div class="header">
+                       <h3>Personal info</h3>
+                       <p>Please provide your name, email address, and phone number.</p>
+                  </div>
+                  <div id="inputtextform"  name="nputtextform">
+                       <span><label for="fname">Name</label><div id="namealert" class="alert">This field is required</div></span>
+                       <input type="text" id="fname" name="fname" placeholder="e.g. Stephen King">
+                       <span><label for="email">Email Address</label><div id="emailalert" class="alert">This field is required</div></span>
+                       <input type="text" id="email" name="email" placeholder=" e.g. stephenking@lorem.com" autocomplete="on">
+                       <span><label for="phoneno">Phone Number</label><div id="phonenoalert" class="alert">This field is required</div></span>
+                       <input type="text" id="phoneno" name="phoneno" placeholder=" e.g. +1 234 567 890">
+                  </div>
+                  <div class="backnext">
+                       <button id="firstbtn" class="nextbtn" type="submit">Next Step</button>
+                  </div>    
+            </div>
+            <!-- Step 1 end -->
+
+            <!-- Step 2 start -->
+            <div id="step2" class="stepsinput">
+                 <div class="header">
+                       <h3 class="headerh">Select your plan</h3>
+                       <p class="headerp">You have the option of monthly or yearly billing.</p>
+                 </div>
+                 <div id="planscostdiv">
+                       <div class="cards">
+                           <img src="./assets/images/icon-arcade.svg" alt="">
+                           <div class="planprice">
+                                <h class="plan">Arcade</h>
+                                <h class="price monthlyprice">$9/mo</h>
+                                <h class="price yearly priceyearly">$90/yr</h>
+                                <h class="yearly yearlyoffer">2 months free</h>
+                           </div>
+                       </div>
+                       <div class="cards">
+                           <img src="./assets/images/icon-advanced.svg" alt="">
+                           <div class="planprice">
+                                <h class="plan">Advanced</h>
+                                <h class="price monthlyprice">$12/mo</h>
+                                <h class="price yearly priceyearly">$120/yr</h>
+                                <h class="yearly yearlyoffer">2 months free</h>
+                           </div>
+                       </div>
+                       <div class="cards">
+                           <img src="./assets/images/icon-pro.svg" alt="">
+                           <div class="planprice">
+                                <h class="plan">Pro</h>
+                                <h class="price monthlyprice">$15/mo</h>
+                                <h class="price yearly priceyearly">$150/yr</h>
+                                <h class="yearly yearlyoffer">2 months free</h>
+                           </div>
+                       </div>
+                 </div>
+                 <div id="sliderbutton">
+                       <h id="slidemo">Monthly</h>
+                       <label for="scheckbox" class="switch">
+                         <input type="checkbox" id="scheckbox" aria-labelledby="" placeholder="monthly" title="slider">
+                         <span class="slider round"></span>
+                       </label>
+                       <h id="slideyr"> Yearly</h>
+                 </div>
+                 <div class="backnext">
+                       <a class="left-anchor" href="">Go Back</a>
+                       <button id="secbtn" class="nextbtn" type="submit">Next Step</button>
+                 </div>    
+            </div>
+            <!-- Step 2 end -->
+
+            <!-- Step 3 start -->
+            <div id="step3" class="stepsinput">
+               <div class="header">
+                    <h3>Pick add-ons</h3>
+                    <p>Add-ons help enhance your gaming experience.</p>
+               </div>
+               <form id="checkboxform" name="checkboxform">
+                    <div class="checboxsdiv">
+                       <div class="boxtext">
+                            <input type="checkbox" id="service" name="service" value="" placeholder="service" title="service">
+                            <div class="checkboxdesc">
+                                <h>Online service</h>
+                                <p>Access to multiplayer games</p>
+                            </div>
+                       </div>
+                       <h class="cost monthly">+$1/mo</h>
+                       <h class="cost yearly">+$10/yr</h>
+                    </div>
+                    <div class="checboxsdiv">
+                       <div class="boxtext">
+                            <input type="checkbox" id="storage" name="storage" value="" placeholder="storage" title="storage">
+                            <div class="checkboxdesc">
+                                <h>Larger storage</h>
+                                <p>Extra 1TB of cloud save</p>
+                            </div>
+                       </div>
+                       <h class="cost monthly">+$2/mo</h>  
+                       <h class="cost yearly">+$20/yr</h> 
+                    </div>
+                    <div class="checboxsdiv">
+                       <div class="boxtext">
+                            <input type="checkbox" id="profile" name="profile" value="" placeholder="profile" title="profile">
+                            <div class="checkboxdesc">
+                                <h>Customizable Profile</h>
+                                <p>Custom theme on your profile</p>
+                            </div>
+                       </div>
+                       <h class="cost monthly">+$2/mo</h>
+                       <h class="cost yearly">+$20/yr</h>
+                    </div>
+               </form>
+               <div class="backnext">
+                   <a class="left-anchor" href="">Go Back</a>
+                   <button id="thrdbtn" class="nextbtn" type="submit">Next Step</button>
+               </div>    
+            </div>
+            <!-- Step 3 end -->
+
+            <!-- Step 4 start -->
+            <div id="step4" class="stepsinput">
+                 <div class="header">
+                      <h3 >Finishing up</h3>
+                      <p >Double-check everything looks OK before confirming.</p>
+                 </div>
+                 <div id="outputdiv">
+                    <div id="selected">
+                        <div id="planedit">
+                            <div id="selectedmonthlyplan" class="selectedplan monthly"><p>Arcade(Monthly)</p><h>$9/mo</h></div>
+                            <div id="selectedyearlyplan" class="selectedplan yearly"><p>Arcade(Yearly)</p><h>$90/yr</h></div>
+                            <a id="changePlanLink">Change</a> 
+                        </div>
+                        <div id="addonsdiv">
+                            <div class="slctdadonsrv monthly selectedaddon " ><p>Online service</p><h>+$1/mo</h></div>
+                            <div class="slctdadonsrv yearly selectedaddon "><p>Online service</p><h>+$10/yr</h></div>
+                            <div class="slctdadonstrg monthly selectedaddon"><p>Larger storage</p><h>+$2/mo</h></div>
+                            <div class="slctdadonstrg yearly selectedaddon "><p>Larger storage</p><h>+$20/yr</h></div>
+                            <div class="slctdadonprfl monthly selectedaddon"><p>Customizable Profile</p><h>+$2/mo</h></div>
+                            <div class="slctdadonprfl yearly selectedaddon "><p>Customizable Profile</p><h>+$20/yr</h></div>
+                        </div>
+                    </div>
+                    <div class="monthly total"> 
+                         <p class="monthly">Total (per month)</p>
+                         <h id="mtotalh" class="monthly"></h>
+                    </div>
+                    <div class="yearly total">
+                         <p class="yearly">Total (per year)</p>
+                         <h id="ytotalh" class="yearly"></h>
+                    </div>
+                 </div>
+                 <div class="backnext">
+                      <a class="left-anchor" href="">Go Back</a>
+                      <button id="confirm" class="nextbtn" type="submit">Confirm</button>
+                 </div>   
+           </div> 
+           <!-- Step 4 end -->
+
+           <!-- Step 5 start -->
+           <div id="step5" class="stepsinput">
+                <img src="./assets/images/icon-thank-you.svg" alt="">
+                <h3 id="steph">Thank you!</h3>
+                <p id="stepp">Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, 
+                    please feel free to email us at 
+                    <a href="mailto:support@loremgaming.com">support@loremgaming.com</a>.</p> 
+           </div>
+           <!--  Step 5 end --> 
+     </div>
+  </div>
+  <script src="script.js"> </script>
+
+</body>
+</html>
